@@ -1,7 +1,14 @@
 # Tumbleweed Backlight
 
 Had some trouble getting xbacklight to work on openSUSE Tumbleweed, so I wrote this
-simple program that should work around it.
+simple program that should work around it. Requires root, a workaround can be found
+at [stackoverflow](https://unix.stackexchange.com/a/248495).
+
+### Compilation:
+
+```
+g++ -std=c++11 twbl.cpp
+```
 
 ### Usage (i3 config):
 
