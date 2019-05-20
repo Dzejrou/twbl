@@ -5,6 +5,11 @@
 
 int main(int argc, char** argv)
 {
+    /**
+     * Edit here with the proper path to your backlight.
+     */
+    std::string fname{"/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight/brightness"};
+
     if (argc < 2)
     {
         std::cerr << "Usage: " << argv[0] << " {,+,-}N\n";
@@ -19,8 +24,6 @@ int main(int argc, char** argv)
         std::cerr << "Argument " << argv[1] << " is not a valid number.\n";
         return 1;
     }
-
-    std::string fname{"/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight/brightness"};
 
     std::ifstream ifs{fname};
 
